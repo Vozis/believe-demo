@@ -1,0 +1,90 @@
+.content {
+    margin-top: 170px;
+    @media (max-width: 720px) {
+        margin-top: 64px;
+    }
+    & p {
+        width: 91px;
+        height: 91px;
+        font-size: 48px;
+        border: 3px solid var(--white);
+        border-radius: 50%;
+        @media (max-width: 720px) {
+            font-size: 24px;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .container {
+        gap: 40px;
+        width: 100%;
+        @media (max-width: 800px) {
+            display: block;
+        }
+        .right {
+            min-width: 650px;
+            max-width: 650px;
+            width: 100%;
+            h3 {
+                line-height: 80%;
+                margin-top: 40px;
+                font-family: 'Panama';
+                font-size: 160px;
+                font-weight: 400;
+
+                @media (max-width: 1770px) {
+                    font-size: 120px;
+                }
+                @media (max-width: 1380px) {
+                    font-size: 80px;
+                }
+                @media (max-width: 960px) {
+                    font-size: 70px;
+                }
+                @media (max-width: 720px) {
+                    font-size: 56px;
+                }
+                @media (max-width: 720px) {
+                    margin-top: 16px;
+                }
+            }
+            @media (max-width: 1380px) {
+                min-width: 450px;
+                max-width: 450px;
+            }
+            @media (max-width: 960px) {
+                min-width: 400px;
+                max-width: 400px;
+            }
+            @media (max-width: 720px) {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
+        .left {
+            line-height: 110%;
+            font-weight: 400;
+            max-width: 783px;
+            width: 100%;
+            letter-spacing: -0.02em;
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: 48px;
+            color: var(--white);
+            @media (max-width: 1770px) {
+                margin-top: 24px;
+
+                font-size: 32px;
+            }
+            @media (max-width: 1380px) {
+                font-size: 25px;
+            }
+            @media (max-width: 720px) {
+                font-size: 20px;
+                line-height: 130%;
+            }
+        }
+    }
+}

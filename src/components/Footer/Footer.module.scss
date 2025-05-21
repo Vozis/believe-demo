@@ -1,0 +1,83 @@
+.footer {
+    background-color: var(--dark-gray);
+    width: 100%;
+    border-radius: 48px;
+    height: 412px;
+    padding: 32px;
+    box-sizing: border-box;
+    @media (max-width: 1526px) {
+        height: 360px;
+    }
+    .top {
+        @media (max-width: 1526px) {
+            font-size: 20px;
+            flex-direction: column-reverse;
+        }
+        .right {
+            max-width: 458px;
+            font-size: 48px;
+            & p:last-child {
+                margin-top: 24px;
+                font-size: 20px;
+                opacity: 30%;
+                line-height: 120%;
+
+                @media (max-width: 1526px) {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+            @media (max-width: 1526px) {
+                margin-top: 30px;
+                font-size: 16px;
+            }
+        }
+        ul {
+            max-width: 1030px;
+            width: 100%;
+            @media (max-width: 1526px) {
+                flex-direction: column;
+                gap: 12px;
+                font-size: 20px;
+            }
+            li {
+                font-size: 48px;
+                @media (max-width: 1526px) {
+                    font-size: 20px;
+                }
+                & span {
+                    color: #666666;
+                }
+            }
+        }
+    }
+    .bottom {
+        width: 100%;
+        font-size: 20px;
+        & p:last-child {
+            opacity: 30%;
+        }
+        @media (max-width: 720px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.believe {
+    margin-top: -370px; // чтобы "спрятать" текст под футером
+    position: relative;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    font-size: 130px;
+    svg {
+        height: 400px !important;
+        @media (max-width: 1000px) {
+            height: 360px !important;
+        }
+        @media (max-width: 720px) {
+            height: 320px !important;
+            transform: translateY(100px);
+        }
+    }
+}
