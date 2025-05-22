@@ -8,7 +8,6 @@ const Believe = () => {
                     You believe <br /> in something
                 </p>
                 <span>don’t you?</span>
-                <div className={styles.gradient} />
                 <div className='df jcc'>
                     <button>Believe</button>
                 </div>
