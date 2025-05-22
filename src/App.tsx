@@ -7,38 +7,42 @@ import Header from './components/Header/Header';
 import Questions from './components/Questions/Questions';
 import Summary from './components/Summary/Summary';
 import Hero from './hero/Hero';
+import AnimatedSection from './components/AnimatedSection/AnimatedSection.tsx';
+import SmoothScroll from './components/SmoothScroll/SmoothScroll.tsx';
 
 function App() {
     return (
-        <>
-            <div className='container'>
+        <SmoothScroll>
+            <section className='container'>
                 <div className='df jcc'>
                     <Header />
                 </div>
-            </div>
-            <div className='hero'>
+            </section>
+            .
+            <section className='hero'>
                 <Hero />
-            </div>
-            <div className='container'>
+            </section>
+            <section className='container'>
                 <div className='believe_manifesto '>
                     <div className='container'>
                         <BelieveManifesto />
                     </div>
                 </div>
-            </div>
+            </section>
             <MobileBelieveManifesto />
             <div className='container'>
                 <Questions />
+
                 <Summary />
             </div>
             <Cards />
-            <div className='container'>
+            <AnimatedSection className='container'>
                 <div className='believe df jcc '>
                     <Believe />
                 </div>
                 <Footer />
-            </div>
-        </>
+            </AnimatedSection>
+        </SmoothScroll>
     );
 }
 

@@ -18,6 +18,23 @@
             font-size: 44px;
         }
     }
+
+    span {
+        font-family: 'Panama';
+        color: white;
+        font-weight: 400;
+        font-size: 128px;
+        line-height: 90%;
+        letter-spacing: -0.08em;
+
+        @media (max-width: 920px) {
+            font-size: 90px;
+        }
+        @media (max-width: 720px) {
+            font-size: 44px;
+        }
+    }
+
     .gradient {
         position: absolute;
         top: 50px;

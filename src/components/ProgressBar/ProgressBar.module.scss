@@ -1,0 +1,12 @@
+.progressBarContainer {
+  pointer-events: none;
+}
+
+.progressBar {
+  overflow: hidden;
+  border-radius: 0.5px;
+}
+
+.progressBarFill {
+  transform-origin: left;
+}

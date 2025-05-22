@@ -5,29 +5,30 @@ interface KaraokeTextProps {
     interval?: number;
     onChange: (value: boolean) => void;
     isStart: boolean;
+    onProgress?: (charIndex: number, totalChars: number) => void;
+    externalProgress?: number;
 }
 
-const TextRead: React.FC<KaraokeTextProps> = ({ text, interval = 20, isStart, onChange }) => {
+const TextRead: React.FC<KaraokeTextProps> = ({ text, isStart, onChange, onProgress, externalProgress }) => {
     const [highlightIndex, setHighlightIndex] = useState(-1);
-    const chars = Array.from(text); // сохраняет символы, включая \n
+    const chars = Array.from(text);
+
     useEffect(() => {
         if (!isStart) return;
 
-        let current = 0;
-        onChange(false);
+        const index = Math.floor((externalProgress || 0) * chars.length);
+        setHighlightIndex(index);
 
-        const timer = setInterval(() => {
-            setHighlightIndex(current);
-            current++;
+        if (onProgress) {
+            onProgress(index, chars.length);
+        }
 
-            if (current >= chars.length) {
-                clearInterval(timer);
-                onChange(true);
-            }
-        }, interval);
-
-        return () => clearInterval(timer);
-    }, [chars.length, interval, isStart, onChange]);
+        if (index >= chars.length - 1) {
+            onChange(true);
+        } else {
+            onChange(false);
+        }
+    }, [externalProgress, chars.length, isStart, onChange, onProgress]);
 
     return (
         <span style={{ whiteSpace: 'pre-wrap' }}>

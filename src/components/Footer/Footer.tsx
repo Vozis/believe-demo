@@ -56,8 +56,8 @@ const Footer = () => {
                     <div className={styles.right}>
                         <p>Disclaimer</p>
                         <p>
-                            $BELIEVE is a non-valuable token meant for entertainment only, without financial promises. Invest at your own risk; the
-                            team assumes no liability for potential losses.
+                            $BELIEVE is a non-valuable token meant for entertainment only, without financial promises. Invest at your own risk; <br />{' '}
+                            the team assumes no liability for potential losses.
                         </p>
                     </div>
 

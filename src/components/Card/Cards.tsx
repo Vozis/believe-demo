@@ -2,11 +2,12 @@ import styles from './Card.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from './Card';
 import 'swiper/swiper-bundle.css';
+import AnimatedSection from '../AnimatedSection/AnimatedSection';
 
 const cards = [
     {
         id: 1,
-        title: '“Faith is the bird that feels the light and sings when the dawn is still dark.”',
+        title: '“Faith is the bird that feels the light and sings when the dawn is still dark”',
         avatar: '/image/avatar/1.png',
         author: 'Rabindranath Tagore',
         description:
@@ -14,14 +15,14 @@ const cards = [
     },
     {
         id: 2,
-        title: '“Faith is the force of life. If a man lives, he must believe in something.”',
+        title: '“Faith is the force of life. If a man lives, he must believe in something”',
         avatar: '/image/avatar/2.png',
         author: 'Leo Tolstoy',
-        description: 'Russian writer. He is regarded as one of the greatest and most influential authors of all time',
+        description: 'Russian writer. He is regarded as one of the greatest and most influential authors of all time',
     },
     {
         id: 3,
-        title: '“Take the first step in faith. You don’t have to see the whole staircase, just take the first step.”',
+        title: '“Take the first step in faith. You don’t have to see the whole staircase, just take the first step”',
         avatar: '/image/avatar/3.png',
         author: 'Martin Luther King Jr',
         description:
@@ -29,7 +30,7 @@ const cards = [
     },
     {
         id: 4,
-        title: '“Jump off the cliff and build your wings on the way down.”',
+        title: '“Jump off the cliff and build your wings on the way down”',
         avatar: '/image/avatar/4.png',
         author: 'Ray Bradbury',
         description:
@@ -37,11 +38,11 @@ const cards = [
     },
     {
         id: 5,
-        title: '“All our dreams can come true, if we have the courage to pursue them.”',
+        title: '“All our dreams can come true, if we have the courage to pursue them”',
         avatar: '/image/avatar/5.png',
         author: 'Walt Disney',
         description:
-            'A pioneer of the American animation industry, he introduced several developments in the production of cartoons. As a film producer, he holds the record for most Academy Awards earned and nominations by an individual',
+            'A pioneer of the American animation industry, he introduced several developments in the production of cartoons. As a film producer, he holds the record for most Academy Awards earned and nominations by an individual',
     },
     {
         id: 6,
@@ -53,7 +54,7 @@ const cards = [
     },
     {
         id: 7,
-        title: '“You have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever.”',
+        title: '“You have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever”',
         avatar: '/image/avatar/7.png',
         author: 'Steve Jobs',
         description:
@@ -61,14 +62,14 @@ const cards = [
     },
     {
         id: 8,
-        title: '“Faith is the force of life. If a man lives, he must believe in something.”',
+        title: '“Faith is the force of life. If a man lives, he must believe in something”',
         avatar: '/image/avatar/8.png',
         author: 'Mahatma Gandhi',
         description: `Indian lawyer, anti-colonial nationalist, and political ethicist who employed nonviolent resistance to lead the successful campaign for India's independence from British rule`,
     },
     {
         id: 9,
-        title: '“The future belongs to those who believe in the beauty of their dreams.”',
+        title: '“The future belongs to those who believe in the beauty of their dreams”',
         avatar: '/image/avatar/9.png',
         author: 'Eleanor Roosevelt',
         description: 'American political figure, diplomat, and activist. She was the longest-serving first lady of the United States',
@@ -77,13 +78,13 @@ const cards = [
 
 const Cards = () => {
     return (
-        <div className={styles.cards}>
+        <AnimatedSection className={styles.cards}>
             <div className={styles.h2}>
                 <h2>
                     Famous people <br /> have their beliefs
                 </h2>
                 <p>Leo Tolstoy, Martin Luther King Jr,</p>
-                <p>Ray Bradbury Walt Disney and other</p>
+                <p>Ray Bradbury, Walt Disney and others</p>
             </div>
             <div className={styles.blocks}>
                 <div className={styles.container}>
@@ -125,7 +126,7 @@ const Cards = () => {
                     ))}
                 </Swiper>
             </div>
-        </div>
+        </AnimatedSection>
     );
 };
 

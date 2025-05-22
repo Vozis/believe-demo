@@ -16,10 +16,12 @@
         .right {
             max-width: 458px;
             font-size: 48px;
+
             & p:last-child {
                 margin-top: 24px;
                 font-size: 20px;
                 opacity: 30%;
+                letter-spacing: 0.01em;
                 line-height: 120%;
 
                 @media (max-width: 1526px) {
@@ -42,9 +44,22 @@
             }
             li {
                 font-size: 48px;
+                color: #666666;
+                cursor: pointer;
+                transition: color 0.3s ease;
+
+                @media (max-width: 768px) {
+                    color: white;
+                }
+
+                &:hover {
+                    color: white;
+                }
+
                 @media (max-width: 1526px) {
                     font-size: 20px;
                 }
+
                 & span {
                     color: #666666;
                 }
@@ -52,6 +67,7 @@
         }
     }
     .bottom {
+        pointer-events: none;
         width: 100%;
         font-size: 20px;
         & p:last-child {

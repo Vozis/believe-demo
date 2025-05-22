@@ -1,30 +1,11 @@
 .content {
-    // width: 90%;
     position: relative;
-    // @media (max-width: 1300px) {
-    //     img {
-    //         width: 250px;
-    //         height: 250px;
-    //         object-fit: contain;
-    //     }
-    // }
-    // @media (max-width: 970px) {
-    //     img {
-    //         width: 200px;
-    //         height: 200px;
-    //         object-fit: contain;
-    //     }
-    // }
 
     .top {
-        transform: translateY(30px);
-        @media (max-width: 1730px) {
-            transform: translateY(-60px);
-        }
-
-        & span {
-            width: 750px;
-            @media (max-width: 1300px) {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 1300px) {
+            & span {
                 width: 500px;
                 & img {
                     object-fit: contain;
@@ -32,15 +13,16 @@
                     height: 180px;
                 }
             }
+        }
+        & span {
+            width: 750px;
+            display: flex;
+            justify-content: space-between;
             & img:nth-child(2) {
-                transform: translateY(20px);
-
                 @media (max-width: 1300px) {
-                    & {
-                        width: 150px;
-                        height: 150px;
-                        object-fit: contain;
-                    }
+                    width: 150px;
+                    height: 150px;
+                    object-fit: contain;
                 }
             }
             img {
@@ -82,56 +64,56 @@
     }
 
     .center {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
         img {
             position: relative;
             z-index: 2;
             @media (max-width: 1300px) {
-                & {
-                    object-fit: contain;
-                    width: 230px;
-                    height: 230px;
-                }
+                object-fit: contain;
+                width: 230px;
+                height: 230px;
             }
         }
     }
+
     & p {
         font-size: 20px;
         margin-top: 10px;
         text-align: center;
         color: var(--light-grey);
     }
+
     .bottom {
         margin-top: 100px;
-        & img:nth-child(1) {
+        display: flex;
+        justify-content: space-around;
+        & img {
             @media (max-width: 1300px) {
-                & {
-                    object-fit: contain;
+                object-fit: contain;
+            }
+            &:nth-child(1) {
+                @media (max-width: 1300px) {
                     width: 200px;
                     height: 200px;
                 }
             }
-        }
-        & img:nth-child(2) {
-            transform: translateY(50px);
-            @media (max-width: 1300px) {
-                & {
-                    object-fit: contain;
+            &:nth-child(2) {
+                @media (max-width: 1300px) {
                     width: 300px;
                     height: 300px;
                 }
             }
-        }
-        & img:nth-child(3) {
-            transform: translateY(-20px);
-            @media (max-width: 1300px) {
-                & {
-                    object-fit: contain;
+            &:nth-child(3) {
+                @media (max-width: 1300px) {
                     width: 200px;
                     height: 200px;
                 }
             }
         }
     }
+
     @media (max-width: 805px) {
         display: none;
     }
@@ -144,16 +126,6 @@
     }
     .text {
         position: relative;
-        // .gradient {
-        //     position: absolute;
-        //     top: 0px;
-        //     right: 90px;
-        //     width: 350px;
-        //     height: 150px;
-        //     opacity: 0.4;
-        //     filter: blur(70px);
-        //     background: linear-gradient(90deg, #f481ff 0%, #3fe2ff 100%);
-        // }
     }
     & p {
         margin-top: 10px;
@@ -193,34 +165,108 @@
             display: flex;
             gap: 8px;
             img {
+                opacity: 0.5;
                 width: 275px;
                 height: 340px;
                 border-radius: 16px;
                 object-fit: cover;
-
                 @media (max-width: 495px) {
                     width: 175px;
                     height: 225px;
                 }
             }
-
             .image {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
             }
-
             .image:nth-child(3) {
                 gap: 8px;
+                padding-right: 16px;
                 .inner {
                     display: flex;
                     gap: 8px;
                 }
-
                 .bottomImage {
                     width: 100%;
                 }
             }
         }
     }
+}
+
+.img {
+    opacity: 0.5;
+}
+
+.img1 {
+    width: 326px;
+    height: 408px;
+}
+
+.img2 {
+    width: 298px;
+    height: 365px;
+}
+
+.img3 {
+    width: 541px;
+    height: 360px;
+}
+
+.img4 {
+    width: 286px;
+    height: 356px;
+}
+
+.img5 {
+    width: 330px;
+    height: 412px;
+}
+
+.img6 {
+    width: 243px;
+    height: 255px;
+}
+
+.img7 {
+    width: 260px;
+    height: 286px;
+}
+
+.containerWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.fadeRight, .fadeLeft {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 160px;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fadeRight {
+    right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #060608);
+
+}
+
+.fadeLeft {
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #060608);
+}
+
+// Обновление контейнера чтобы избавиться от паддинга слева
+.container {
+    overflow-x: scroll;
+    width: 100%;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    box-sizing: border-box;
+    // Удаляем padding-left, т.к. теперь мы оборачиваем контейнер
 }

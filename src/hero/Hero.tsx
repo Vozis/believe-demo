@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
 import RotatingWords from './RotatingWords';
 import styles from './Hero.module.scss';
+import { motion } from 'motion/react';
 
 const Hero = () => {
     return (
