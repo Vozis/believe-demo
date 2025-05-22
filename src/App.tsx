@@ -18,7 +18,6 @@ function App() {
                     <Header />
                 </div>
             </section>
-            .
             <section className='hero'>
                 <Hero />
             </section>
