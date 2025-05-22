@@ -7,7 +7,6 @@ import Header from './components/Header/Header';
 import Questions from './components/Questions/Questions';
 import Summary from './components/Summary/Summary';
 import Hero from './hero/Hero';
-import AnimatedSection from './components/AnimatedSection/AnimatedSection.tsx';
 import SmoothScroll from './components/SmoothScroll/SmoothScroll.tsx';
 
 function App() {
@@ -34,12 +33,12 @@ function App() {
                 <Summary />
             </div>
             <Cards />
-            <AnimatedSection className='container'>
+            <div className='container'>
                 <div className='believe df jcc '>
                     <Believe />
                 </div>
                 <Footer />
-            </AnimatedSection>
+            </div>
         </SmoothScroll>
     );
 }

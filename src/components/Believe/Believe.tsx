@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Believe.module.scss';
 import { AnimatePresence, motion } from 'motion/react';
+import AnimatedSection from '../AnimatedSection/AnimatedSection.tsx';
 
 const Believe = () => {
     const [showGradient, setShowGradient] = useState(false);
@@ -9,7 +10,7 @@ const Believe = () => {
         // Задержка для появления градиента после завершения анимации
         const timer = setTimeout(() => {
             setShowGradient(true);
-        }, 3000); // 1 секунда задержки, можно настроить по необходимости
+        }, 1000); // 1 секунда задержки, можно настроить по необходимости
 
         return () => clearTimeout(timer);
     }, []);
@@ -17,10 +18,12 @@ const Believe = () => {
     return (
         <div className={`${styles.bel} df jcc`}>
             <div>
-                <p>
-                    You believe <br /> in something
-                </p>
-                <span>don’t you?</span>
+                <AnimatedSection>
+                    <p>
+                        You believe <br /> in something
+                    </p>
+                    <span>don’t you?</span>
+                </AnimatedSection>
                 <AnimatePresence>
                     {showGradient && (
                         <motion.div
