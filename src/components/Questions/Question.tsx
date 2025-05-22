@@ -8,13 +8,16 @@ interface IQuestion {
     description: string;
     number: number;
     isActive: boolean;
+    offset?: [string, string];
 }
 
-const Question = ({ title, number, description, isActive }: IQuestion) => {
+const Question = ({ title, number, description, isActive, offset = ['start 70%', 'end 40%'] }: IQuestion) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['start 80%', 'end 20%'],
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        offset,
     });
 
     return (

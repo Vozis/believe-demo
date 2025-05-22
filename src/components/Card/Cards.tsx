@@ -78,14 +78,14 @@ const cards = [
 
 const Cards = () => {
     return (
-        <AnimatedSection className={styles.cards}>
-            <div className={styles.h2}>
+        <div className={styles.cards}>
+            <AnimatedSection className={styles.h2}>
                 <h2>
                     Famous people <br /> have their beliefs
                 </h2>
                 <p>Leo Tolstoy, Martin Luther King Jr,</p>
                 <p>Ray Bradbury, Walt Disney and others</p>
-            </div>
+            </AnimatedSection>
             <div className={styles.blocks}>
                 <div className={styles.container}>
                     <div className={styles.column1}>
@@ -126,7 +126,7 @@ const Cards = () => {
                     ))}
                 </Swiper>
             </div>
-        </AnimatedSection>
+        </div>
     );
 };
 

@@ -6,14 +6,14 @@ $breakpoint-mobile: 480px;
     height: 100vh;
 
     h1 {
-        .blur {
-            &:first-child {
-                filter: blur(1.5px);
-            }
-        }
-        .last {
-            filter: blur(1px);
-        }
+        //.blur {
+        //    &:first-child {
+        //        filter: blur(1.5px);
+        //    }
+        //}
+        //.last {
+        //    filter: blur(1px);
+        //}
 
         font-size: 160px;
         @media (max-width: 1878px) {
@@ -30,14 +30,14 @@ $breakpoint-mobile: 480px;
         }
         @media (max-width: 930px) {
             font-size: 40px;
-            .blur {
-                &:first-child {
-                    filter: blur(0.9px);
-                }
-            }
-            .last {
-                filter: blur(0.6px);
-            }
+            //.blur {
+            //    &:first-child {
+            //        filter: blur(1.5px);
+            //    }
+            //}
+            //.last {
+            //    filter: blur(1.5px);
+            //}
         }
 
         @media (max-width: 400px) {
@@ -79,4 +79,39 @@ $breakpoint-mobile: 480px;
             font-size: 50px;
         }
     }
+}
+
+.blur {
+    display: inline-block;
+    color: transparent;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        z-index: 1;
+        -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%);
+        mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%);
+    }
+
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        filter: blur(3px);
+        z-index: 1;
+        -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+        mask-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+
+        @media (max-width: 440px) {
+            filter: blur(1.5px);
+        }
+    }
+
+
 }

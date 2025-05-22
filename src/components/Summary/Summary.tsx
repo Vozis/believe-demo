@@ -4,7 +4,7 @@ import AnimatedSection from '../AnimatedSection/AnimatedSection.tsx';
 const Summary = () => {
     return (
         <AnimatedSection className={`${styles.summary} df aic fdc `}>
-            <div className={styles.title}>Summary</div>
+            {/*<div className={styles.title}>Summary</div>*/}
             <div className={styles.textContainer}>
                 <p>There's no need to name it.</p>
                 <p>

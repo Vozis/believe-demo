@@ -10,7 +10,7 @@ const Questions = () => {
     const { ref: question1Ref, inView: question1InView } = useInView({
         threshold: 0.1,
         triggerOnce: false,
-        rootMargin: '10% 0px 0px 0px',
+        rootMargin: '0px 0px 0px 0px',
     });
 
     const { ref: question2Ref, inView: question2InView } = useInView({
@@ -35,6 +35,7 @@ const Questions = () => {
                     title={`Why are \n we moving?`}
                     description={`Maybe it's just a feeling. But it's real enough to keep going. And sometimes, that's all you need. \nWe act because we see something ahead. A future, a change, a version of life we want to reach. Even if we can't explain it — we move toward it.`}
                     isActive={question2InView}
+                    offset={['start 60%', 'end 50%']}
                 />
             </div>
         </div>

@@ -30,7 +30,9 @@
 
     .believe {
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
 
         button {
             position: relative;
@@ -91,7 +93,7 @@
         display: none;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 440px) {
         .desktop {
             display: none;
         }

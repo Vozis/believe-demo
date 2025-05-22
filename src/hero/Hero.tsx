@@ -7,8 +7,10 @@ const Hero = () => {
         <div className={`${styles.hero} df aic`}>
             <div>
                 <h1>
-                    <span className={styles.blur}>Be</span>
-                    <span className={styles.last}>li</span>eve in <RotatingWords />
+                    <span className={styles.blur} data-text='Believe in '>
+                        Believe in{' '}
+                    </span>
+                    <RotatingWords />
                 </h1>
                 <motion.h2
                     initial={{ opacity: 0, y: 70, filter: 'blur(20px)' }}
