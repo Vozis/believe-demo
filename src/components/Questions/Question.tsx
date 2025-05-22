@@ -1,48 +1,40 @@
-import TextRead from '../TextRead/TextReac';
+import { useRef } from 'react';
+import { motion, useScroll } from 'framer-motion';
 import styles from './Question.module.scss';
-import AnimatedSection from '../AnimatedSection/AnimatedSection.tsx';
+import TextRead from '../TextRead/TextReac.tsx';
 
 interface IQuestion {
     title: string;
     description: string;
     number: number;
-    onChange?: (value: boolean) => void;
-    isStart: boolean;
-    onProgress?: (progress: number) => void;
-    externalProgress?: number;
+    isActive: boolean;
 }
 
-const Question = ({ title, number, description, onChange, isStart, onProgress, externalProgress }: IQuestion) => {
-    const splitTitle = title.split('\n');
-
-    const handleTextProgress = (charIndex: number, totalChars: number) => {
-        if (onProgress) {
-            onProgress(charIndex / totalChars);
-        }
-    };
+const Question = ({ title, number, description, isActive }: IQuestion) => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['start 80%', 'end 20%'],
+    });
 
     return (
-        <AnimatedSection className={`${styles.content} `}>
-            <p className='df jcc aic'>{number}</p>
-            <div className={`${styles.container} df jcsb`}>
-                <div className={styles.right}>
-                    <h3>
-                        {splitTitle.map((text, i) => {
-                            return <div key={i}>{text}</div>;
-                        })}
-                    </h3>
-                </div>
-                <div className={styles.left}>
-                    <TextRead
-                        isStart={isStart}
-                        onChange={value => onChange && onChange(value)}
-                        text={description}
-                        onProgress={handleTextProgress}
-                        externalProgress={externalProgress}
-                    />
+        <div ref={ref} data-question={number} className={styles.question}>
+            <div className={styles.content}>
+                <motion.p className='df jcc aic'>{number}</motion.p>
+                <div className={`${styles.container} df jcsb`}>
+                    <div className={styles.right}>
+                        <h3>
+                            {title.split('\n').map((text, i) => (
+                                <div key={i}>{text}</div>
+                            ))}
+                        </h3>
+                    </div>
+                    <div className={styles.left}>
+                        <TextRead isStart={isActive} text={description} externalProgress={scrollYProgress} />
+                    </div>
                 </div>
             </div>
-        </AnimatedSection>
+        </div>
     );
 };
 

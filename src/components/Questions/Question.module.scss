@@ -1,3 +1,8 @@
+.quations {
+ position: relative;
+}
+
+
 .content {
     margin-top: 170px;
     @media (max-width: 720px) {
@@ -89,5 +94,94 @@
                 line-height: 130%;
             }
         }
+    }
+}
+
+
+.textReadContainer {
+    position: relative;
+    white-space: pre-wrap;
+}
+
+.baseText {
+    color: rgba(102, 102, 102, 0.7); // Серый цвет для неактивного текста
+}
+
+.highlightText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    white-space: pre-wrap;
+}
+
+.questionContainer {
+    min-height: 300vh; // 3 высоты экрана - регулируйте по необходимости
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    //padding-top: 40vh; // Смещение вопроса сверху
+}
+
+.textReadContainer {
+    position: relative;
+    white-space: pre-wrap;
+}
+
+.baseText {
+    color: rgba(102, 102, 102, 0.7); // Серый цвет для неактивного текста
+}
+
+.highlightText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    white-space: pre-wrap;
+}
+
+.questionContainer {
+    position: relative;
+    //padding: 15vh 0 30vh; // Добавляем пространство до и после вопроса
+    min-height: fit-content;
+}
+
+.textReadContainer {
+    position: relative;
+    white-space: pre-wrap;
+}
+
+.baseText {
+    color: rgba(102, 102, 102, 0.7);
+}
+
+.highlightText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    white-space: pre-wrap;
+}
+
+
+.textReadContainer {
+    position: relative;
+
+    .baseText, .highlightText {
+        white-space: pre-wrap;
+    }
+
+    .highlightText {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white; // или другой цвет для выделения
+    }
+
+    .baseText {
+        color: var(--light-grey)
     }
 }

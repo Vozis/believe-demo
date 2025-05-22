@@ -32,7 +32,6 @@ function App() {
             <MobileBelieveManifesto />
             <div className='container'>
                 <Questions />
-
                 <Summary />
             </div>
             <Cards />

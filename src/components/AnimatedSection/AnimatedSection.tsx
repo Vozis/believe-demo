@@ -16,7 +16,7 @@ const AnimatedSection = ({ children, className }: AnimatedSectionProps) => {
 
     const opacity = useTransform(
         scrollYProgress,
-        [0, 0.2, 0.8, 1], // положения скролла
+        [0, 0.2, 0.9, 1], // положения скролла
         [0, 1, 1, 0], // соответствующие значения прозрачности
     );
 
@@ -26,7 +26,7 @@ const AnimatedSection = ({ children, className }: AnimatedSectionProps) => {
         [100, 0, 0, -50], // смещение при появлении и исчезновении
     );
 
-    const blur = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], ['blur(16px)', 'blur(0px)', 'blur(0px)', 'blur(16px)']);
+    const blur = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], ['blur(16px)', 'blur(0px)', 'blur(0px)', 'blur(16px)']);
 
     return (
         <motion.section

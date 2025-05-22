@@ -1,60 +1,80 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, MotionValue } from 'framer-motion';
+import styles from '../Questions/Question.module.scss';
 
-interface KaraokeTextProps {
+interface TextReadProps {
     text: string;
-    interval?: number;
-    onChange: (value: boolean) => void;
     isStart: boolean;
-    onProgress?: (charIndex: number, totalChars: number) => void;
-    externalProgress?: number;
+    externalProgress: MotionValue<number>;
 }
 
-const TextRead: React.FC<KaraokeTextProps> = ({ text, isStart, onChange, onProgress, externalProgress }) => {
-    const [highlightIndex, setHighlightIndex] = useState(-1);
-    const chars = Array.from(text);
+const TextRead: React.FC<TextReadProps> = ({ text, isStart, externalProgress }) => {
+    const sentences = text.split(/\n/).filter(Boolean);
+    const [progress, setProgress] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (!isStart) return;
+        const updateProgress = () => {
+            setProgress(externalProgress.get());
+        };
 
-        const index = Math.floor((externalProgress || 0) * chars.length);
-        setHighlightIndex(index);
+        const unsubscribe = externalProgress.onChange(updateProgress);
+        updateProgress();
+        return () => unsubscribe();
+    }, [externalProgress]);
 
-        if (onProgress) {
-            onProgress(index, chars.length);
-        }
+    const getTotalWordCount = () => {
+        let count = 0;
+        sentences.forEach(sentence => {
+            count += sentence.split(/\s+/).length;
+        });
+        return count;
+    };
 
-        if (index >= chars.length - 1) {
-            onChange(true);
-        } else {
-            onChange(false);
-        }
-    }, [externalProgress, chars.length, isStart, onChange, onProgress]);
+    const totalWords = getTotalWordCount();
+    let wordIndex = 0;
 
     return (
-        <span style={{ whiteSpace: 'pre-wrap' }}>
-            {chars.map((char, i) => {
-                if (char === '\n') {
+        <div ref={containerRef} className={styles.textReadContainer}>
+            <div className={styles.baseText}>{text}</div>
+
+            <div className={styles.highlightText}>
+                {sentences.map((sentence, sentenceIndex) => {
+                    // Используем regex с захватывающими группами для сохранения пробелов
+                    const tokens = sentence.match(/(\S+)(\s*)/g) || [];
+
                     return (
-                        <div key={i} className='upper'>
-                            <br />
+                        <div key={sentenceIndex}>
+                            {tokens.map((token, i) => {
+                                const word = token.match(/\S+/)?.[0] || '';
+                                const space = token.match(/\s*$/)?.[0] || '';
+
+                                const currentWordIndex = wordIndex++;
+                                const threshold = currentWordIndex / totalWords;
+                                const nextThreshold = threshold + 0.03;
+
+                                const opacity = isStart
+                                    ? progress >= 0.99
+                                        ? 1
+                                        : progress < threshold
+                                          ? 0
+                                          : progress > nextThreshold
+                                            ? 1
+                                            : (progress - threshold) / (nextThreshold - threshold)
+                                    : 0;
+
+                                return (
+                                    <React.Fragment key={i}>
+                                        <motion.span style={{ opacity }}>{word}</motion.span>
+                                        <span>{space}</span>
+                                    </React.Fragment>
+                                );
+                            })}
                         </div>
                     );
-                }
-
-                return (
-                    <span
-                        key={i}
-                        style={{
-                            color: 'var(--white)',
-                            opacity: i <= highlightIndex ? 1 : 0.3,
-                            transition: 'opacity 0.5s ease',
-                        }}
-                    >
-                        {char}
-                    </span>
-                );
-            })}
-        </span>
+                })}
+            </div>
+        </div>
     );
 };
 
