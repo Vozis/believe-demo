@@ -5,7 +5,20 @@
     position: relative;
     text-align: center;
 
-    &::after {
+    //&::after {
+    //    //content: '';
+    //    //position: absolute;
+    //    //top: 50%;
+    //    //left: 50%;
+    //    //width: 526px;
+    //    //height: 188px;
+    //    //transform: translate(-50%, -50%);
+    //    //opacity: 0.6;
+    //    //filter: blur(125px);
+    //    //background: linear-gradient(90deg, #f481ff 0%, #3fe2ff 100%);
+    //}
+
+    .gradient {
         content: '';
         position: absolute;
         top: 50%;
