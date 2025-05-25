@@ -92,14 +92,14 @@ const Cards = () => {
                         <Card data={cards[0]} />
                         <Card data={cards[1]} />
                         <Card data={cards[2]} />
-                        <Card data={cards[6]} />
+                        {/*<Card data={cards[6]} />*/}
                     </div>
                     <div className={styles.column2}>
                         <Card data={cards[3]} />
                         <Card data={cards[4]} />
                         <Card data={cards[5]} />
-                        <Card data={cards[7]} />
-                        <Card data={cards[8]} />
+                        {/*<Card data={cards[7]} />*/}
+                        {/*<Card data={cards[8]} />*/}
                     </div>
                     <div className={styles.column3}>
                         <Card data={cards[6]} />
