@@ -8,8 +8,9 @@ const Hero = () => {
             <div>
                 <h1>
                     <span className={styles.blur} data-text='Believe in '>
-                        Believe in{' '}
+                        Believe in
                     </span>
+                    <span> </span>
                     <RotatingWords />
                 </h1>
                 <motion.h2
