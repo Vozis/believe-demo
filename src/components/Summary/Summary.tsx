@@ -20,7 +20,7 @@ const Summary = () => {
                 <p> </p>
                 <p>Somewhere just beneath</p>
                 <br />
-                <p>the surface</p>
+                <p>the surface.</p>
             </div>
         </AnimatedSection>
     );
