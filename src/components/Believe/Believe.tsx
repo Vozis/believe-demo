@@ -34,7 +34,7 @@ const Believe = () => {
                 {/*    )}*/}
                 {/*</AnimatePresence>*/}
                 <div className='df jcc'>
-                    <button>Believe</button>
+                    <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">Believe</a>
                 </div>
             </div>
         </div>
