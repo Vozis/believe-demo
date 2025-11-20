@@ -48,13 +48,13 @@ const Header = () => {
                         <button>Believe</button>
                     </div>
 
-                    <button className={styles.btn}>
+                    <a href="https://x.com/Believe_in_SOL" target="_blank" className={styles.btn}>
                         <IconX className={styles.icon} />
-                    </button>
+                    </a>
 
-                    <button className={styles.btn}>
+                    <a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" className={styles.btn}>
                         <IconBirds className={styles.icon} />
-                    </button>
+                    </a>
                 </div>
 
                 <div className={`${styles.mobile} df aic jcsb`}>
