@@ -6,7 +6,7 @@ interface FooterMenuProps {
     onClose?: () => void;
 }
 
-const FooterMenu: React.FC<FooterMenuProps> = ({}) => {
+const FooterMenu: React.FC<FooterMenuProps> = ({ onClose }) => {
     return (
         <motion.div
             className={`${styles.footerMenu}`}
