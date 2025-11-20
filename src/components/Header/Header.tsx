@@ -45,7 +45,9 @@ const Header = () => {
                     <IconStar className={styles.star} />
                     <p className={styles.manifesto}>Manifesto</p>
                     <div className={styles.believe}>
-                        <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">Believe</a>
+                        <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">
+                            <button>Believe</button>
+                        </a>
                     </div>
 
                     <a href="https://x.com/Believe_in_SOL" target="_blank" className={styles.btn}>
