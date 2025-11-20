@@ -3,9 +3,10 @@ import styles from './Header.module.scss';
 
 interface FooterMenuProps {
     isVisible?: boolean;
+    onClose?: () => void;
 }
 
-const FooterMenu: React.FC<FooterMenuProps> = () => {
+const FooterMenu: React.FC<FooterMenuProps> = ({}) => {
     return (
         <motion.div
             className={`${styles.footerMenu}`}
@@ -21,10 +22,10 @@ const FooterMenu: React.FC<FooterMenuProps> = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
                 >
-                    <li>Home</li>
-                    <li>Manifesto</li>
+                    <li><a href="#home" style={{color: "inherit",textDecoration: "none"}} onClick={onClose}>Home</a></li>
+                    <li><a href="#manifesto" style={{color: "inherit",textDecoration: "none"}} onClick={onClose}>Manifesto</a></li>
                     <li>
-                        X <span>(ex. twitter)</span>
+                        <a href="https://x.com/Believe_in_SOL" target="_blank" style={{color: "inherit",textDecoration: "none"}}>X <span>(ex. twitter)</span></a>
                     </li>
                     <li><a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" style={{color: "inherit",textDecoration: "none"}}>Dexscreener</a></li>
                 </motion.ul>

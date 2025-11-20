@@ -39,7 +39,7 @@ const Header = () => {
 
     return (
         <>
-            <AnimatePresence>{isVisible && <FooterMenu />}</AnimatePresence>
+            <AnimatePresence>{isVisible && <FooterMenu onClose={() => setIsVisible(false)} />}</AnimatePresence>
             <header className={`${styles.header}`}>
                 <div className={`${styles.desktop} df jcsb aic`}>
                     <IconStar className={styles.star} />
