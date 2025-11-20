@@ -65,9 +65,9 @@ const Footer = () => {
                         <li>Home</li>
                         <li>Manifesto</li>
                         <li>
-                            X <span>(ex. twitter)</span>
+                            <a href="https://x.com/Believe_in_SOL" target="_blank">X <span>(ex. twitter)</span></a>
                         </li>
-                        <li>Dexscreener</li>
+                        <li><a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank">Dexscreener</a></li>
                     </ul>
                 </div>
                 <div className={`${styles.bottom} df jcsb`}>
