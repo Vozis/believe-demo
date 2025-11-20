@@ -63,7 +63,9 @@ const Header = () => {
                     <IconStar className={styles.star} />
                     <div className={'df'} style={{ gap: 8 }}>
                         <div className={styles.believe}>
-                            <button>Believe</button>
+                            <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">
+                                <button>Believe</button>
+                            </a>
                         </div>
                         <button onClick={() => setIsVisible(prev => !prev)} className={`${styles.btn} ${styles.burgerBtn}`}>
                             <div className={styles.burger}>

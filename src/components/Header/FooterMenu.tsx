@@ -26,7 +26,7 @@ const FooterMenu: React.FC<FooterMenuProps> = () => {
                     <li>
                         X <span>(ex. twitter)</span>
                     </li>
-                    <li>Dexscreener</li>
+                    <li><a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" style={{color: "inherit",textDecoration: "none"}}>Dexscreener</a></li>
                 </motion.ul>
             </div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }}>
