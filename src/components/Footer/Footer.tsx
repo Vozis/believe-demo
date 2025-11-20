@@ -62,8 +62,8 @@ const Footer = () => {
                     </div>
 
                     <ul className='df jcsb'>
-                        <li>Home</li>
-                        <li>Manifesto</li>
+                        <li><a href="#home" style={{color: "inherit",textDecoration: "none"}}>Home</a></li>
+                        <li><a href="#manifesto" style={{color: "inherit",textDecoration: "none"}}>Manifesto</a></li>
                         <li>
                             <a href="https://x.com/Believe_in_SOL" target="_blank" style={{color: "inherit",textDecoration: "none"}}>X <span>(ex. twitter)</span></a>
                         </li>

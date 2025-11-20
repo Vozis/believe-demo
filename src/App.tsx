@@ -13,7 +13,7 @@ function App() {
     return (
         <SmoothScroll>
             <section className='container'>
-                <div className='df jcc'>
+                <div className='df jcc' id="home">
                     <Header />
                 </div>
             </section>
@@ -22,7 +22,7 @@ function App() {
             </section>
             <section className='container'>
                 <div className='believe_manifesto '>
-                    <div className='container'>
+                    <div className='container' id="manifesto">
                         <BelieveManifesto />
                     </div>
                 </div>
