@@ -33,7 +33,7 @@ const Believe = () => {
                 {/*        />*/}
                 {/*    )}*/}
                 {/*</AnimatePresence>*/}
-                <div className='df jcc'>
+                <div className='df jcc' style={{ position: 'relative', zIndex: 10 }}>
                     <a
                         href='https://jup.ag/?sell=So11111111111111111111111111111111111111112&buy=HytQtBdZJeGyLH6DuKPdFJkSao5G8fvnfwbKZWLtpump'
                         target='_blank'

@@ -44,6 +44,8 @@
         font-size: 128px;
         line-height: 90%;
         letter-spacing: -0.03em;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 920px) {
             font-size: 90px;
@@ -60,6 +62,8 @@
         font-size: 128px;
         line-height: 90%;
         letter-spacing: -0.08em;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 920px) {
             font-size: 90px;
@@ -79,9 +83,12 @@
         padding: 17px 20px;
         border-radius: 16px;
         background-color: #e6e6e6;
+        position: relative;
+        z-index: 10;
 
         @media (max-width: 720px) {
             margin-top: 32px;
+            z-index: 100;
         }
     }
 }
