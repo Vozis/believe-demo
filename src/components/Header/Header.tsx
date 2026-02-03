@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import IconBirds from '../../icons/IconBirds';
 import IconStar from '../../icons/IconStar';
 import styles from './Header.module.scss';
@@ -45,16 +45,19 @@ const Header = () => {
                     <IconStar className={styles.star} />
                     <p className={styles.manifesto}>Manifesto</p>
                     <div className={styles.believe}>
-                        <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">
+                        <a
+                            href='https://jup.ag/?sell=So11111111111111111111111111111111111111112&buy=HytQtBdZJeGyLH6DuKPdFJkSao5G8fvnfwbKZWLtpump'
+                            target='_blank'
+                        >
                             <button>Believe</button>
                         </a>
                     </div>
 
-                    <a href="https://x.com/Believe_in_SOL" target="_blank" className={styles.btn}>
+                    <a href='https://x.com/Believe_in_SOL' target='_blank' className={styles.btn}>
                         <IconX className={styles.icon} />
                     </a>
 
-                    <a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" className={styles.btn}>
+                    <a href='https://dexscreener.com/solana/43ygpxntpup7lvkk5hr9e4dgxxa4wj6rlikt8jl5ty8o' target='_blank' className={styles.btn}>
                         <IconBirds className={styles.icon} />
                     </a>
                 </div>
@@ -63,7 +66,10 @@ const Header = () => {
                     <IconStar className={styles.star} />
                     <div className={'df'} style={{ gap: 8 }}>
                         <div className={styles.believe}>
-                            <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=HoQYRCnUeyZZyFiPtYDw48kHyGwjsaUXJxDVtxcK4yPg" target="_blank">
+                            <a
+                                href='https://jup.ag/?sell=So11111111111111111111111111111111111111112&buy=HytQtBdZJeGyLH6DuKPdFJkSao5G8fvnfwbKZWLtpump'
+                                target='_blank'
+                            >
                                 <button>Believe</button>
                             </a>
                         </div>

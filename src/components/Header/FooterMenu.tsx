@@ -22,12 +22,30 @@ const FooterMenu: React.FC<FooterMenuProps> = ({ onClose }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
                 >
-                    <li><a href="#home" style={{color: "inherit",textDecoration: "none"}} onClick={onClose}>Home</a></li>
-                    <li><a href="#manifesto" style={{color: "inherit",textDecoration: "none"}} onClick={onClose}>Manifesto</a></li>
                     <li>
-                        <a href="https://x.com/Believe_in_SOL" target="_blank" style={{color: "inherit",textDecoration: "none"}}>X <span>(ex. twitter)</span></a>
+                        <a href='#home' style={{ color: 'inherit', textDecoration: 'none' }} onClick={onClose}>
+                            Home
+                        </a>
                     </li>
-                    <li><a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" style={{color: "inherit",textDecoration: "none"}}>Dexscreener</a></li>
+                    <li>
+                        <a href='#manifesto' style={{ color: 'inherit', textDecoration: 'none' }} onClick={onClose}>
+                            Manifesto
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://x.com/Believe_in_SOL' target='_blank' style={{ color: 'inherit', textDecoration: 'none' }}>
+                            X <span>(ex. twitter)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href='https://dexscreener.com/solana/43ygpxntpup7lvkk5hr9e4dgxxa4wj6rlikt8jl5ty8o'
+                            target='_blank'
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                        >
+                            Dexscreener
+                        </a>
+                    </li>
                 </motion.ul>
             </div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.2 }}>

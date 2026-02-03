@@ -62,12 +62,30 @@ const Footer = () => {
                     </div>
 
                     <ul className='df jcsb'>
-                        <li><a href="#home" style={{color: "inherit",textDecoration: "none"}}>Home</a></li>
-                        <li><a href="#manifesto" style={{color: "inherit",textDecoration: "none"}}>Manifesto</a></li>
                         <li>
-                            <a href="https://x.com/Believe_in_SOL" target="_blank" style={{color: "inherit",textDecoration: "none"}}>X <span>(ex. twitter)</span></a>
+                            <a href='#home' style={{ color: 'inherit', textDecoration: 'none' }}>
+                                Home
+                            </a>
                         </li>
-                        <li><a href="https://dexscreener.com/solana/4p7bfautjzseux6y3dcnwv5qskbqk2nx54ikxkimbrow" target="_blank" style={{color: "inherit",textDecoration: "none"}}>Dexscreener</a></li>
+                        <li>
+                            <a href='#manifesto' style={{ color: 'inherit', textDecoration: 'none' }}>
+                                Manifesto
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://x.com/Believe_in_SOL' target='_blank' style={{ color: 'inherit', textDecoration: 'none' }}>
+                                X <span>(ex. twitter)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href='https://dexscreener.com/solana/43ygpxntpup7lvkk5hr9e4dgxxa4wj6rlikt8jl5ty8o'
+                                target='_blank'
+                                style={{ color: 'inherit', textDecoration: 'none' }}
+                            >
+                                Dexscreener
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div className={`${styles.bottom} df jcsb`}>
